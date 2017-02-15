@@ -2,6 +2,8 @@
 
 Modifications to Naut for the Elm subreddit.
 
+![](http://i.imgur.com/1zZfFfy.png)
+
 ## Building and Setting as a Subreddit theme
 
 1.  Install [ImageMagick](http://imagemagick.org/script/index.php) and [Make](https://www.gnu.org/software/make/)
