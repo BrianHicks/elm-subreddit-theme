@@ -1,0 +1,3 @@
+[submodule "vendor/naut"]
+	path = vendor/naut
+	url = https://github.com/Axel--/Naut-for-reddit
