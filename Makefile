@@ -20,5 +20,6 @@ images/spritesheet.png: imagesSource/elm-color.png
 	convert -fill 'rgb(131,205,79)' -opaque 'rgb(104,178,89)' -fuzz 15% $@ $@
 	convert -fill 'rgb(103,181,201)' -opaque 'rgb(83,110,229)' -fuzz 15% $@ $@
 
-subreddit.css: css.sed vendor/naut vendor/naut/Naut\ 3\ -\ Main\ CSS\ File.css
-	sed -f css.sed vendor/naut/NAUT\ 3\ -\ Main\ CSS\ File.css > $@
+subreddit.css: css.sed vendor/naut vendor/naut/src/naut_src.css
+	sed -f css.sed vendor/naut/src/naut_src.css > $@
+	cleancss -o $@ $@
