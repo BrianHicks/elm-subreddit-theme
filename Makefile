@@ -1,4 +1,4 @@
-all: images/headerimg.png images/noresults.png images/spritesheet.png subreddit.css
+all: images/headerimg.png images/noresults.png images/spritesheet.png images/mobileicon.png subreddit.css
 
 vendor/naut:
 	git submodule init
@@ -20,6 +20,9 @@ images/spritesheet.png: imagesSource/elm-color.png
 	convert -fill 'rgb(131,205,79)' -opaque 'rgb(104,178,89)' -fuzz 15% $@ $@
 	convert -fill 'rgb(103,181,201)' -opaque 'rgb(83,110,229)' -fuzz 15% $@ $@
 
-subreddit.css: css.sed vendor/naut vendor/naut/src/naut_src.css
-	sed -f css.sed vendor/naut/src/naut_src.css > $@
+images/mobileicon.png: imagesSource/elm-color.png
+	convert -geometry 256x256 $< $@
+
+subreddit.css: css.sed vendor/naut overrides.css vendor/naut/src/naut_src.css
+	cat vendor/naut/src/naut_src.css overrides.css | sed -f css.sed > $@
 	cleancss -o $@ $@
