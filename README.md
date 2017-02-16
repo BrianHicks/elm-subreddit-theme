@@ -2,7 +2,7 @@
 
 Modifications to Naut for the Elm subreddit.
 
-![](http://i.imgur.com/1zZfFfy.png)
+![screenshot](http://i.imgur.com/8RF0zIv.jpg)
 
 ## Building and Setting as a Subreddit theme
 
