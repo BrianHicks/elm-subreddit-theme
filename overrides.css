@@ -1,0 +1,21 @@
+/* stock theme doesn't allow for two types of posts. This stacks them and moves
+/* the sidebar down to accomodate. */
+.sidebox.submit.submit-text > .morelink {
+  top: 198px;
+}
+.side {
+  margin-top: 250px;
+}
+.linkinfo {
+  margin-top: 50px;
+}
+
+/* stock theme pops a "remember to read the rules" on hover, and it's annoying. */
+.morelink:after {
+  display: none;
+}
+
+/* stock theme fades in the body. Just no. */
+body > .content {
+  animation: none;
+}
